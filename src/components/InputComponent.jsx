@@ -3,13 +3,13 @@ import CardComponent from "./CardComponent";
 
 export default function InputComponent() {
   const [book, setBook] = useState({});
-  const [Books, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
 
   // handle input change
   const handleInputChange = (e) => {
+    //Destructing assignment
     const { name, value } = e.target;
-
-    // console.log("helo" + e.target.name);
+    console.log("helo" + e.target.name);
 
     setBook((prev) => ({
       ...prev,
@@ -18,13 +18,18 @@ export default function InputComponent() {
   };
   useEffect(() => {
     console.log(book);
-    console.log(Books);
+    console.log(books);
   });
 
   //   handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("hello");
+
+    console.log(books);
+
     setBooks((prev) => [...prev, { ...book }]);
+    console.log(book);
   };
   return (
     <div className="container mx-auto my-6 space-y-6">
@@ -121,7 +126,7 @@ export default function InputComponent() {
           Submit
         </button>
       </form>
-      <CardComponent Books={Books} />
+      <CardComponent Books={books} />
     </div>
   );
 }

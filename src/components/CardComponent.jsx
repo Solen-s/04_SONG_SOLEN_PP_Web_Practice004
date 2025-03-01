@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 export default function CardComponent({ Books }) {
   const [bookList, setBookList] = useState([]);
 
-  const mergeStudents = () => {
+  const margeBooks = () => {
     setBookList([...Books]);
   };
 
   useEffect(() => {
-    mergeStudents();
+    margeBooks();
   }, [Books]);
   return (
     <div className="grid grid-cols-3 gap-6">
