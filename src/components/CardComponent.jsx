@@ -11,7 +11,7 @@ export default function CardComponent({ Books }) {
     margeBooks();
   }, [Books]);
   return (
-    <div className="grid grid-cols-3 gap-6 mx-15">
+    <div className="grid grid-cols-3 gap-6 px-20">
       {bookList?.map((book, index) => (
         <div key={index} className=" bg-gray-200 rounded-lg shadow-lg">
           <p className="float-right bg-blue-500 p-2 rounded-l-lg text-white">
