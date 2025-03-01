@@ -35,8 +35,8 @@ export default function InputComponent() {
     <div className="container mx-auto my-6 space-y-6 ">
       {/* header */}
       <h1 className="text-3xl font-semibold text-center">React Project Demo</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="grid gap-6 mb-6 md:grid-row-2 px-20">
+      <form onSubmit={handleSubmit} className="px-15">
+        <div className="grid gap-6 mb-6 md:grid-row-2 ">
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label
